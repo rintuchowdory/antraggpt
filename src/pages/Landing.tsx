@@ -3,8 +3,6 @@ import { ArrowRight, Sparkles, Shield, Clock } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 const Landing: React.FC = () => {
   const {lang,setLang,setView} = useApp();
-  const headline = lang==='de' ? 'Deutsche Behoerden. Einfach gemacht.' : 'German bureaucracy. Made simple.';
-  const sub = lang==='de' ? 'Schritt fuer Schritt durch jeden Antrag in Ihrer Sprache.' : 'Step by step through every form in your language.';
   return (
     <div className="landing">
       <header className="landing-header">
@@ -16,9 +14,9 @@ const Landing: React.FC = () => {
         </div>
       </header>
       <section className="hero">
-        <div className="hero-badge"><Sparkles size={13}/> {lang==='de'?'KI-gestuetzte Behoerdenhilfe':'AI-powered form assistance'}</div>
-        <h1 className="hero-headline">{headline}</h1>
-        <p className="hero-sub">{sub}</p>
+        <div className="hero-badge"><Sparkles size={13}/> {lang==='de'?'KI-gestützte Behördenhilfe':'AI-powered form assistance'}</div>
+        <h1 className="hero-headline">{lang==='de'?'Deutsche Behörden. Einfach gemacht.':'German bureaucracy. Made simple.'}</h1>
+        <p className="hero-sub">{lang==='de'?'Schritt für Schritt durch jeden Antrag – in Ihrer Sprache.':'Step by step through every form – in your language.'}</p>
         <button className="hero-cta" onClick={()=>setView('dashboard')}>
           {lang==='de'?'Kostenlos starten':'Get started free'} <ArrowRight size={18}/>
         </button>
@@ -32,8 +30,8 @@ const Landing: React.FC = () => {
       </section>
       <section className="features">
         {[
-          {icon:<Sparkles size={20}/>,title:lang==='de'?'KI-gestuetzt':'AI-Powered',text:lang==='de'?'Automatische Fehlererkennung':'Auto error detection'},
-          {icon:<Shield size={20}/>,title:lang==='de'?'Datensicher':'Privacy First',text:lang==='de'?'Daten bleiben auf Ihrem Geraet':'Data stays on your device'},
+          {icon:<Sparkles size={20}/>,title:lang==='de'?'KI-gestützt':'AI-Powered',text:lang==='de'?'Automatische Fehlererkennung':'Auto error detection'},
+          {icon:<Shield size={20}/>,title:lang==='de'?'Datensicher':'Privacy First',text:lang==='de'?'Daten bleiben auf Ihrem Gerät':'Data stays on your device'},
           {icon:<Clock size={20}/>,title:lang==='de'?'Zeitersparnis':'Save Time',text:lang==='de'?'80% schneller als manuell':'80% faster than manually'},
         ].map(f=>(
           <div key={f.title} className="feature-card">
