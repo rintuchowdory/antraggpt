@@ -44,6 +44,11 @@ const Layout: React.FC<{children: React.ReactNode}> = ({children}) => {
             <span className="plan-free">Free Plan</span>
             <button className="upgrade-btn">Upgrade \u2726</button>
           </div>
+          <div className="legal-links">
+            <a href="/antraggpt/impressum.html" target="_blank" rel="noopener noreferrer">{lang==='de'?'Impressum':'Legal Notice'}</a>
+            <span className="legal-sep">·</span>
+            <a href="/antraggpt/datenschutz.html" target="_blank" rel="noopener noreferrer">{lang==='de'?'Datenschutz':'Privacy'}</a>
+          </div>
         </div>
       </aside>
       <div className="main-wrapper">

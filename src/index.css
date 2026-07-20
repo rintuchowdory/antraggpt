@@ -28,6 +28,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);min-heig
 .plan-badge{display:flex;align-items:center;justify-content:space-between;}
 .plan-free{font-size:.72rem;color:rgba(255,255,255,.3);}
 .upgrade-btn{font-size:.75rem;font-weight:600;font-family:var(--font-body);background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border:none;cursor:pointer;padding:.3rem .7rem;border-radius:6px;}
+.legal-links{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.6rem;font-size:.7rem;}
+.legal-links a{color:var(--text-muted,#888);text-decoration:none;}
+.legal-links a:hover{text-decoration:underline;}
+.legal-sep{color:var(--text-muted,#888);}
 .main-content{margin-left:var(--sidebar-w);flex:1;}
 .page-content{padding:2rem 2rem;max-width:860px;}
 .center-content{display:flex;align-items:center;justify-content:center;min-height:80vh;}
